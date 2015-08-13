@@ -1,0 +1,32 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GaugeInteractive_LowStockAlert>
+            <version>1.0.0</version>
+        </GaugeInteractive_LowStockAlert>
+    </modules>
+    <global>
+        <models>
+            <gaugeinteractive_lowstockalert>
+                <class>GaugeInteractive_LowStockAlert_Model</class>
+                <resourceModel>gaugeinteractive_lowstockalert_resource</resourceModel>
+            </gaugeinteractive_lowstockalert>
+        </models>
+        <events>
+            <sales_order_place_after>
+                <observers>
+                    <gaugeinteractive_lowqtyalert>
+                        <type>singleton</type>
+                        <class>GaugeInteractive_LowStockAlert_Model_Observer</class>
+                        <method>checkQuantity</method>
+                    </gaugeinteractive_lowqtyalert>
+                </observers>
+            </sales_order_place_after>
+        </events>
+        <helpers>
+            <gaugeinteractive_lowstockalert>
+                <class>GaugeInteractive_LowStockAlert_Helper</class>
+            </gaugeinteractive_lowstockalert>
+        </helpers>
+    </global>
+</config>

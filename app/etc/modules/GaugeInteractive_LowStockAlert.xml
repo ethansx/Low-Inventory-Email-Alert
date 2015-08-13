@@ -1,0 +1,9 @@
+<?xml version="1.0"?>
+<config>
+    <modules>
+        <GaugeInteractive_LowStockAlert>
+            <active>true</active>
+            <codePool>local</codePool>
+        </GaugeInteractive_LowStockAlert>
+    </modules>
+</config>
